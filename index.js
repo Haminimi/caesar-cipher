@@ -24,6 +24,16 @@ export const calculator = {
 	},
 };
 
+function shiftArray(array, shiftFactor) {
+	const shiftedArray = [];
+	const effectiveShiftFactor = shiftFactor % array.length;
+	const secondPart = array.slice(0, effectiveShiftFactor);
+	const firstPart = array.slice(effectiveShiftFactor);
+	firstPart.push(...secondPart);
+	shiftedArray.push(...firstPart);
+	return shiftedArray;
+}
+
 function generateAlphabet() {
 	const alphabet = [];
 	for (let i = 65; i < 90; i++) {
