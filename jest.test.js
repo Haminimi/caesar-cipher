@@ -5,3 +5,9 @@ test('Capitalize', () => {
 		'Jest test for the capitalize function.'
 	);
 });
+
+test('Reverse string', () => {
+	expect(reverseString('Jest test for the capitalize function.')).toBe(
+		'.noitcnuf ezilatipac eht rof tset tseJ'
+	);
+});
