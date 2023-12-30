@@ -1,11 +1,14 @@
+//Capitalize
 export function capitalize(sentence) {
 	return sentence.charAt(0).toUpperCase() + sentence.slice(1);
 }
 
+//Reverse string
 export function reverseString(string) {
 	return string.split('').reverse().join('');
 }
 
+//Calculator
 export const calculator = {
 	add: (a, b) => {
 		return a + b;
@@ -24,26 +27,33 @@ export const calculator = {
 	},
 };
 
+//Caesar Cipher
 export function caesarCipher(string, shiftFactor) {
 	const alphabet = generateAlphabet();
+	console.log(alphabet);
 	const arrayOfLetters = string.split('');
 	const shiftedAlphabet = shiftArray(alphabet, shiftFactor);
 	const indexArray = [];
+
 	arrayOfLetters.forEach((letter) => {
-		if (letter === ' ') {
-			indexArray.push(letter);
-		} else {
+		if (letter === ',') {
+			indexArray.push(',');
+		} else if (isPartOfAlphabet(letter.toUpperCase(), alphabet)) {
 			indexArray.push(alphabet.indexOf(letter.toUpperCase()));
+		} else {
+			indexArray.push(letter);
 		}
 	});
+
 	const resultArray = [];
 	indexArray.forEach((index) => {
-		if (index !== ' ') {
+		if (typeof index === 'number') {
 			resultArray.push(shiftedAlphabet[index]);
 		} else {
-			resultArray.push(' ');
+			resultArray.push(index);
 		}
 	});
+
 	const shiftedString = resultArray.join('');
 	return shiftedString;
 }
@@ -60,8 +70,13 @@ function shiftArray(array, shiftFactor) {
 
 function generateAlphabet() {
 	const alphabet = [];
-	for (let i = 65; i < 90; i++) {
+	for (let i = 65; i <= 90; i++) {
 		alphabet.push(String.fromCharCode(i));
 	}
 	return alphabet;
+}
+
+function isPartOfAlphabet(input, alphabet) {
+	const regex = new RegExp(`^[${alphabet}]+$`);
+	return regex.test(input);
 }
