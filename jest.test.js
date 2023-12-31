@@ -1,4 +1,10 @@
-import { capitalize, reverseString, calculator, caesarCipher } from '.';
+import {
+	capitalize,
+	reverseString,
+	calculator,
+	caesarCipher,
+	analyzeArray,
+} from '.';
 
 test('Capitalize', () => {
 	expect(capitalize('jest test for the capitalize function.')).toBe(
@@ -19,6 +25,7 @@ test('Calculator', () => {
 	expect(calculator.divide(1, 2)).toBeCloseTo(0.5);
 });
 
+//Caesar Shift Cipher
 test('Caesar Shift Cipher', () => {
 	expect(caesarCipher('julius, caesar', 3)).toBe('MXOLXV, FDHVDU');
 	expect(caesarCipher('marcus brutus', 3)).toBe('PDUFXV EUXWXV');
@@ -29,4 +36,13 @@ test('Caesar Shift Cipher', () => {
 	);
 	expect(caesarCipher('Jest testing.', 15)).toBe('YTHI ITHIXCV.');
 	expect(caesarCipher('YTHI ITHIXCV.', 11)).toBe('JEST TESTING.');
+});
+
+//Analyze array
+test('Analyze array', () => {
+	const resultObject = analyzeArray([1, 8, 3, 4, 2, 6]);
+	expect(resultObject.average).toBe(4);
+	expect(resultObject.min).toBe(1);
+	expect(resultObject.max).toBe(8);
+	expect(resultObject.length).toBe(6);
 });
