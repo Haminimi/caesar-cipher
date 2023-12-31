@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator } from '.';
+import { capitalize, reverseString, calculator, caesarCipher } from '.';
 
 test('Capitalize', () => {
 	expect(capitalize('jest test for the capitalize function.')).toBe(
@@ -20,5 +20,13 @@ test('Calculator', () => {
 });
 
 test('Caesar Shift Cipher', () => {
-	expect(caesarCipher('julius caesar', 3)).toBe('MXOLXV FDHVDU');
+	expect(caesarCipher('julius, caesar', 3)).toBe('MXOLXV, FDHVDU');
+	expect(caesarCipher('marcus brutus', 3)).toBe('PDUFXV EUXWXV');
+	expect(caesarCipher('marcus crassus', 5)).toBe('RFWHZX HWFXXZX');
+	expect(caesarCipher('RFWHZX HWFXXZX', 21)).toBe('MARCUS CRASSUS');
+	expect(caesarCipher('Beware the Ides of March.', 7)).toBe(
+		'ILDHYL AOL PKLZ VM THYJO.'
+	);
+	expect(caesarCipher('Jest testing.', 15)).toBe('YTHI ITHIXCV.');
+	expect(caesarCipher('YTHI ITHIXCV.', 11)).toBe('JEST TESTING.');
 });
