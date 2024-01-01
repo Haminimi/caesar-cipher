@@ -27,10 +27,10 @@ export const calculator = {
 	},
 };
 
-//Caesar Cipher
+//Caesar Shift Cipher
 export function caesarCipher(string, shiftFactor) {
 	const alphabet = generateAlphabet();
-	console.log(alphabet);
+
 	const arrayOfLetters = string.split('');
 	const shiftedAlphabet = shiftArray(alphabet, shiftFactor);
 	const indexArray = [];
@@ -79,4 +79,22 @@ function generateAlphabet() {
 function isPartOfAlphabet(input, alphabet) {
 	const regex = new RegExp(`^[${alphabet}]+$`);
 	return regex.test(input);
+}
+
+//Analyze array
+export function analyzeArray(array) {
+	const average = (array) => {
+		return (
+			array.reduce((prev, current) => current + prev, 0) / array.length
+		);
+	};
+
+	const resultObject = {
+		average: average(array),
+		min: Math.min(...array),
+		max: Math.max(...array),
+		length: array.length,
+	};
+
+	return resultObject;
 }
