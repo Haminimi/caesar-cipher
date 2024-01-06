@@ -22,11 +22,12 @@ and you'll get an encrypted result:
 
 **Tools**
 - Git
+- Jest
 - Visual Studio Code
 ## Covered Topics
 **This section mentions the main topics covered during project work and prior lessons**
 - Open Source
-- Advanced Git - Rewriting History, Remote Repositories, Collaborative Workflow
+- Advanced Git - Rewriting History, Remote Repositories, Collaboration
 - Test Driven Development
 - Testing / Jest
 ## Reflection
