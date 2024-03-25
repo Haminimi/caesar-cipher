@@ -1,4 +1,4 @@
-# Jest Testing
+# Caesar Cipher
 ## Description
 The main purpose of the project is to practice testing using Jest. The functions used for tests are just some basic functions, but the interesting one is the caesarCipher function. [The project](https://www.theodinproject.com/lessons/node-path-javascript-testing-practice) is a part of [The Odin Project](https://www.theodinproject.com/dashboard)'s curriculum. The Odin Project provides a high quality web development education maintained by an open source community.
 ## Live Preview
@@ -21,9 +21,9 @@ and you'll get an encrypted result:
 - Vanilla JavaScript
 
 **Tools**
+- Visual Studio Code
 - Git
 - Jest
-- Visual Studio Code
 ## Covered Topics
 **This section mentions the main topics covered during project work and prior lessons**
 - Open Source
@@ -39,5 +39,4 @@ The main purpose of the project is to practice testing using Jest. The functions
 - [Exercism](https://exercism.org/profiles/Haminimi)
 - [LeetCode](https://leetcode.com/Haminimi/)
 - Email: haminimi.dev@gmail.com
-- LinkedIn: A profile will be available at the time I am job ready
 ## Happy coding!
