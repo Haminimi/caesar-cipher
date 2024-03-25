@@ -2,7 +2,7 @@
 ## Description
 The main purpose of the project is to practice testing using Jest. The functions used for tests are just some basic functions, but the interesting one is the caesarCipher function. [The project](https://www.theodinproject.com/lessons/node-path-javascript-testing-practice) is a part of [The Odin Project](https://www.theodinproject.com/dashboard)'s curriculum. The Odin Project provides a high quality web development education maintained by an open source community.
 ## Live Preview
-Open up your [developer console](https://haminimi.github.io/jest-testing/) and try the caesarCipher function this way: 
+Open up your [developer console](https://haminimi.github.io/caesar-cipher/) and try the caesarCipher function this way: 
 ```javascript
 caesarCipher('Julius Caesar', 3)
 ```
