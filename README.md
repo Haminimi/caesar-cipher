@@ -34,9 +34,4 @@ and you'll get an encrypted result:
 The main purpose of the project is to practice testing using Jest. The functions used for tests are just some basic functions, but the interesting one is the caesarCipher function. This could potentially become an interesting standalone project with some other encryption/decryption techniques.
 ## Credits
 - Icon used for the favicon image is one of the [Hierarchy icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/hierarchy).
-## Author
-- [GitHub](https://github.com/Haminimi)
-- [Exercism](https://exercism.org/profiles/Haminimi)
-- [LeetCode](https://leetcode.com/Haminimi/)
-- Email: haminimi.dev@gmail.com
 ## Happy coding!
